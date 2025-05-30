@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mantra Cinematic Display</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Cinzel', serif;
+      background: url('https://images.unsplash.com/photo-1581320995511-d1cbcb25ba47?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .mantra-box {
+      margin: 20px;
+      padding: 20px;
+      border: 3px solid;
+      border-radius: 15px;
+      font-size: 1.6em;
+      animation: glowBorder 2s infinite alternate;
+      background-color: rgba(0, 0, 0, 0.6);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+      width: 90%;
+      max-width: 600px;
+      opacity: 0;
+      animation: fadeInUp 2s ease-out forwards;
+    }
+
+    .gayatri {
+      color: #00ff88;
+      border-color: #00ff88;
+      animation-delay: 1s;
+    }
+
+    .mahamrityunjaya {
+      color: #ff5555;
+      border-color: #ff5555;
+      animation-delay: 3.5s;
+    }
+
+    .footer {
+      margin-top: auto;
+      margin-bottom: 30px;
+      font-size: 1.1em;
+      color: #ffffffcc;
+      animation: fadeIn 2s ease-out forwards;
+      animation-delay: 6s;
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(40px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes glowBorder {
+      0% {
+        box-shadow: 0 0 10px 2px rgba(0,255,136,0.5), 0 0 20px rgba(0,255,136,0.4);
+      }
+      100% {
+        box-shadow: 0 0 20px 6px rgba(0,255,136,0.8), 0 0 30px rgba(0,255,136,0.6);
+      }
+    }
+
+    .mahamrityunjaya {
+      animation: glowRed 2s infinite alternate;
+    }
+
+    @keyframes glowRed {
+      0% {
+        box-shadow: 0 0 10px 2px rgba(255,85,85,0.4), 0 0 20px rgba(255,85,85,0.3);
+      }
+      100% {
+        box-shadow: 0 0 20px 6px rgba(255,85,85,0.8), 0 0 30px rgba(255,85,85,0.6);
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @media (max-width: 600px) {
+      .mantra-box {
+        font-size: 1.3em;
+        padding: 15px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="mantra-box gayatri">
+    Om Bhur Bhuvah Swaha<br>
+    Tat Savitur Varenyam<br>
+    Bhargo Devasya Dheemahi<br>
+    Dhiyo Yo Nah Prachodayat
+  </div>
+
+  <div class="mantra-box mahamrityunjaya">
+    Om Tryambakam Yajamahe<br>
+    Sugandhim Pushtivardhanam<br>
+    Urvarukamiva Bandhanan<br>
+    Mrityor Mukshiya Maamritat
+  </div>
+
+  <div class="footer">
+    ✨ Created by <strong>ModhuSudhan Roy</strong> ✨
+  </div>
+
+</body>
+</html>
